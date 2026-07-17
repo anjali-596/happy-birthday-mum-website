@@ -30,7 +30,7 @@
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"><g><circle cx="17" cy="17" r="3.2" fill="%23C9A66B"/><path d="M17 17 C13 12, 8 12, 8 17 C8 21, 13 21, 17 17 Z" fill="%23E7AFC2" opacity="0.9"/><path d="M17 17 C21 12, 26 12, 26 17 C26 21, 21 21, 17 17 Z" fill="%23F0C6D6" opacity="0.9"/><path d="M17 17 C13 21, 13 26, 17 26 C21 26, 21 21, 17 17 Z" fill="%23DD9BB0" opacity="0.9"/><path d="M17 17 C13 13, 13 8, 17 8 C21 8, 21 13, 17 17 Z" fill="%23F3D6DE" opacity="0.95"/></g></svg>') 17 17, auto;
   }
 
-  a, button, .seal, .envelope, .pb-btn, .pb-upload-label{
+  a, button, .seal, .envelope{
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"><g><circle cx="17" cy="17" r="3.6" fill="%23A9764F"/><path d="M17 17 C13 12, 8 12, 8 17 C8 21, 13 21, 17 17 Z" fill="%23DD8FA8"/><path d="M17 17 C21 12, 26 12, 26 17 C26 21, 21 21, 17 17 Z" fill="%23E8AFC6"/><path d="M17 17 C13 21, 13 26, 17 26 C21 26, 21 21, 17 17 Z" fill="%23C97D97"/><path d="M17 17 C13 13, 13 8, 17 8 C21 8, 21 13, 17 17 Z" fill="%23F0C2D4"/></g></svg>') 17 17, pointer;
   }
 
@@ -234,64 +234,6 @@
   .corner-flower.tl{ top:-20px; left:-20px; transform:rotate(-24deg);}
   .corner-flower.br{ bottom:-20px; right:-20px; transform:rotate(156deg);}
 
-  /* ---------- PHOTO BOOTH ---------- */
-  .photobooth{
-    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    padding:80px 20px 100px; text-align:center;
-    background:linear-gradient(180deg, var(--cream), #F6E9D8 50%, var(--cream));
-  }
-  .pb-intro h2{ font-size:clamp(1.8rem,4vw,2.6rem); color:var(--plum); margin-bottom:10px;}
-  .pb-intro p{ color:#7A5566; font-style:italic; margin-bottom:36px;}
-
-  .polaroid{
-    background:#fffdf9;
-    padding:18px 18px 14px;
-    width:min(88vw,340px);
-    box-shadow:0 20px 40px rgba(91,58,74,0.22);
-    transform:rotate(-2deg);
-    transition:transform 0.4s ease;
-    position:relative;
-  }
-  .polaroid:hover{ transform:rotate(0deg) scale(1.02); }
-  .polaroid .peony-sticker{ position:absolute; top:-22px; right:-18px; width:56px; height:56px; transform:rotate(12deg); filter:drop-shadow(0 4px 6px rgba(91,58,74,0.25));}
-
-  .pb-frame{
-    width:100%; aspect-ratio:1/1; background:#e7dcc9;
-    overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center;
-  }
-  .pb-frame video, .pb-frame img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    transform:scaleX(-1);
-  }
-  .pb-frame img{ transform:none; }
-  .pb-placeholder{ color:#9c8468; font-size:0.85rem; padding:20px; display:flex; flex-direction:column; align-items:center; gap:10px;}
-  .pb-placeholder svg{ width:44px; height:44px; opacity:0.7;}
-
-  .pb-caption{
-    font-size:1.7rem; color:var(--plum); text-align:center; margin-top:10px; letter-spacing:0.5px;
-  }
-
-  .pb-controls{
-    margin-top:30px; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; align-items:center;
-  }
-  .pb-btn{
-    border:1.5px solid var(--gold); background:var(--paper); color:var(--plum);
-    padding:10px 24px; border-radius:999px; font-family:'EB Garamond',serif; font-size:1rem;
-    letter-spacing:0.5px; transition:background 0.25s ease, transform 0.2s ease;
-  }
-  .pb-btn:hover{ background:var(--blush); transform:translateY(-2px); }
-  .pb-btn:disabled{ opacity:0.4; transform:none; }
-  .pb-btn.primary{ background:var(--rose); color:#fff; border-color:var(--rose); }
-  .pb-btn.primary:hover{ background:#cf8fa1; }
-
-  .pb-upload-label{
-    border:1.5px dashed var(--gold); padding:10px 20px; border-radius:999px; font-size:0.9rem; color:#8a6f4e;
-    display:inline-flex; align-items:center;
-  }
-  .pb-upload-label:hover{ background:var(--paper); }
-
-  .pb-note{ margin-top:16px; font-size:0.8rem; color:#a98a97; max-width:340px;}
-
   /* ---------- CLOSING ---------- */
   .closing{
     min-height:70vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -437,49 +379,17 @@
 
   <div class="letter-card" id="letterCard">
     <svg class="corner-flower tl" viewBox="0 0 200 200"><use href="#peony"/></svg>
-    <div class="to">To the best mother in the universe,</div>
+    <div class="to">Happy Birthday, Mumma. 🤍</div>
     <div class="body-text">
-      Thanks for being there — through every ordinary Tuesday and every big, trembling moment, for the quiet sacrifices I probably still don't know about, and for loving me in a way that never once asked to be repaid.<br><br>
-      Today the whole garden is for you. Every petal here is a small thank you for a lifetime of things too big to fit in a letter.<br><br>
-      I love you more than words, more than flowers, more than any page could ever hold.
+      I'm not always the easiest daughter. I know I'm a little chaotic. I randomly hug you, shower you with kisses, nag you over the tiniest things, and somehow, five minutes later, we're laughing together as if nothing ever happened. That's just us, and I wouldn't trade it for anything.<br><br>
+      Thank you for being my safe place, my biggest supporter, and the person who has loved me through every version of myself. Your strength, kindness, and endless patience inspire me every single day.<br><br>
+      No matter how old I grow, a part of me will always be your little girl, looking for your hugs, your advice, and your smile.<br><br>
+      I hope this year brings you even a fraction of the happiness you've filled my life with. You deserve a world as beautiful as your heart.<br><br>
+      Happy Birthday to the most wonderful mother in the universe. I love you endlessly.
     </div>
-    <div class="signoff">Happy Birthday, Mum</div>
+    <div class="signoff">Forever your little chaos,<br>Anjali</div>
     <svg class="corner-flower br" viewBox="0 0 200 200"><use href="#peony"/></svg>
   </div>
-</section>
-
-<!-- ================= PHOTO BOOTH ================= -->
-<section class="photobooth" id="photobooth">
-  <div class="pb-intro">
-    <h2>Snap a little memory</h2>
-    <p>A tiny polaroid for today, yours to keep</p>
-  </div>
-
-  <div class="polaroid" id="polaroid">
-    <svg class="peony-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#peony"/></svg>
-    <div class="pb-frame" id="pbFrame">
-      <video id="pbVideo" autoplay playsinline muted style="display:none;"></video>
-      <img id="pbPhoto" style="display:none;" alt="your captured photo">
-      <div class="pb-placeholder" id="pbPlaceholder">
-        <svg viewBox="0 0 200 200"><use href="#peony"/></svg>
-        <p>press "start camera" below,<br>or upload a photo instead</p>
-      </div>
-    </div>
-    <div class="pb-caption script">17th July, 2026</div>
-  </div>
-
-  <div class="pb-controls">
-    <button class="pb-btn primary" id="pbStart">Start Camera</button>
-    <button class="pb-btn" id="pbCapture" disabled>Capture</button>
-    <button class="pb-btn" id="pbRetake" style="display:none;">Retake</button>
-    <a class="pb-btn primary" id="pbDownload" style="display:none;" download="mum-birthday-polaroid.png">Download Photo</a>
-    <label class="pb-upload-label">upload a photo instead
-      <input type="file" id="pbUpload" accept="image/*" hidden>
-    </label>
-  </div>
-  <p class="pb-note" id="pbNote">Nothing you capture here leaves your browser — it only gets saved when you press download.</p>
-
-  <canvas id="pbCanvas" width="640" height="760" style="display:none;"></canvas>
 </section>
 
 <!-- ================= CLOSING ================= -->
@@ -543,131 +453,6 @@
   }
   seal.addEventListener('click', openEnvelope);
   envelope.addEventListener('click', openEnvelope);
-
-  // ---- Photo Booth ----
-  const pbVideo = document.getElementById('pbVideo');
-  const pbPhoto = document.getElementById('pbPhoto');
-  const pbPlaceholder = document.getElementById('pbPlaceholder');
-  const pbStart = document.getElementById('pbStart');
-  const pbCapture = document.getElementById('pbCapture');
-  const pbRetake = document.getElementById('pbRetake');
-  const pbDownload = document.getElementById('pbDownload');
-  const pbUpload = document.getElementById('pbUpload');
-  const pbCanvas = document.getElementById('pbCanvas');
-  const pbNote = document.getElementById('pbNote');
-  let currentStream = null;
-  const CAPTION = '17th July, 2026';
-
-  async function startCamera(){
-    try{
-      currentStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}, audio:false});
-      pbVideo.srcObject = currentStream;
-      pbVideo.style.display = 'block';
-      pbPlaceholder.style.display = 'none';
-      pbPhoto.style.display = 'none';
-      pbCapture.disabled = false;
-      pbStart.textContent = 'Camera On';
-      pbStart.disabled = true;
-    }catch(err){
-      pbNote.textContent = "Couldn't access your camera — no worries, just upload a photo instead below.";
-      pbNote.style.color = '#c07d8f';
-    }
-  }
-
-  function stopCamera(){
-    if(currentStream){
-      currentStream.getTracks().forEach(t=>t.stop());
-      currentStream = null;
-    }
-  }
-
-  async function drawPolaroid(sourceEl, isVideo){
-    await document.fonts.ready;
-    const ctx = pbCanvas.getContext('2d');
-    const W = pbCanvas.width, H = pbCanvas.height;
-    const border = 40;
-    const photoSize = W - border*2;
-
-    // cream card background
-    ctx.fillStyle = '#fffdf9';
-    ctx.fillRect(0,0,W,H);
-
-    // source natural size
-    const sw = isVideo ? sourceEl.videoWidth : sourceEl.naturalWidth;
-    const sh = isVideo ? sourceEl.videoHeight : sourceEl.naturalHeight;
-    const side = Math.min(sw, sh);
-    const sx = (sw - side)/2;
-    const sy = (sh - side)/2;
-
-    ctx.save();
-    ctx.fillStyle = '#e7dcc9';
-    ctx.fillRect(border, border, photoSize, photoSize);
-    ctx.beginPath();
-    ctx.rect(border, border, photoSize, photoSize);
-    ctx.clip();
-    if(isVideo){
-      // mirror the video like the live preview
-      ctx.translate(border + photoSize, border);
-      ctx.scale(-1, 1);
-      ctx.drawImage(sourceEl, sx, sy, side, side, 0, 0, photoSize, photoSize);
-    } else {
-      ctx.drawImage(sourceEl, sx, sy, side, side, border, border, photoSize, photoSize);
-    }
-    ctx.restore();
-
-    // caption
-    ctx.fillStyle = '#5B3A4A';
-    ctx.textAlign = 'center';
-    ctx.font = '54px Tangerine, cursive';
-    ctx.fillText(CAPTION, W/2, border + photoSize + 62);
-
-    return pbCanvas.toDataURL('image/png');
-  }
-
-  async function showResult(dataUrl){
-    pbPhoto.src = dataUrl;
-    pbPhoto.style.display = 'block';
-    pbVideo.style.display = 'none';
-    pbPlaceholder.style.display = 'none';
-    pbCapture.style.display = 'none';
-    pbStart.style.display = 'none';
-    pbRetake.style.display = 'inline-block';
-    pbDownload.style.display = 'inline-block';
-    pbDownload.href = dataUrl;
-    stopCamera();
-  }
-
-  pbStart.addEventListener('click', startCamera);
-
-  pbCapture.addEventListener('click', async ()=>{
-    const dataUrl = await drawPolaroid(pbVideo, true);
-    showResult(dataUrl);
-  });
-
-  pbUpload.addEventListener('change', (e)=>{
-    const file = e.target.files[0];
-    if(!file) return;
-    const img = new Image();
-    img.onload = async ()=>{
-      const dataUrl = await drawPolaroid(img, false);
-      showResult(dataUrl);
-    };
-    img.src = URL.createObjectURL(file);
-  });
-
-  pbRetake.addEventListener('click', ()=>{
-    pbPhoto.style.display = 'none';
-    pbPlaceholder.style.display = 'flex';
-    pbCapture.style.display = 'inline-block';
-    pbCapture.disabled = true;
-    pbStart.style.display = 'inline-block';
-    pbStart.disabled = false;
-    pbStart.textContent = 'Start Camera';
-    pbRetake.style.display = 'none';
-    pbDownload.style.display = 'none';
-    pbNote.textContent = "Nothing you capture here leaves your browser — it only gets saved when you press download.";
-    pbNote.style.color = '#a98a97';
-  });
 </script>
 
 </body>
